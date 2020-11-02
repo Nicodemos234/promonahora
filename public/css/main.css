@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* Layout styles */
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #FCFCFC;
+}
+
+.menu {
+    background-color: #8039E3;
+}
+
+.promo-brand {
+    line-height: 18px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.menu .nav-link {
+    color: rgba(255, 255, 255, .85) !important;
+}
+
+.menu .nav-link:hover, .menu .active a {
+    color: white !important;
+}
+
+.btn-promo {
+    color: #fff;
+    background-color: #66E385;
+    border-color: #66E385;
+}
+
+.btn-promo:hover {
+    color: #fff;
+    background-color: #66E385;
+    border-color: #66E385;
+}
+
+.icon-align {
+    vertical-align: bottom;
+}
+
+/* Card styles */
+
+.promo-card {
+    max-width: 238px;
+    height: 310px;
+    background-color: white;
+    box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 8px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.promo-card-title a {
+    font-size: 14px;
+    color: #5C2F9A;
+}
+
+.promo-card-title a:hover {
+    text-decoration: none;
+}
+
+.promo-card-title {
+    text-align: center;
+    line-height: 18px;
+}
+
+.promo-card-image {
+    text-align: center;
+}
+
+.promo-card-image img {
+    max-height: 165px;
+    max-width: 100%;
+}
+
+.promo-card-price {
+    text-align: center;
+    line-height: 18px;
+}
+
+.promo-price-of {
+    font-size: 13px;
+    font-weight: bold;
+    color: rgba(90, 45, 150, .46);
+}
+
+.promo-price-per {
+    font-size: 20px;
+    font-weight: bold;
+    color: #5A2D96;
+}
