@@ -6,7 +6,7 @@
         </a>
     </div>
     <div class="promo-card-image">
-        <a href="/oferta/{{ $product->id }}" target="_blank">
+    <a href="/oferta/{{ preg_replace('/\W+/', '-', strtolower($product->name))."-".$product->id }}" target="_blank">
             <img src="{{ $product->pic }}" alt="{{ $product->name }}">
         </a>
     </div>

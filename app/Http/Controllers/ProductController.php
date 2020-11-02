@@ -16,8 +16,9 @@ class ProductController extends Controller
         return view('product.index', compact('products'));
     }
 
-    public function show(Product $product)
+    public function show($nome, $id)
     {
+        $product = Product::find($id);
         return view('product.show', compact('product'));
     }
 

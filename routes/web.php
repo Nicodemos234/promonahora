@@ -17,4 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [ProductController::class, 'index']);
-Route::get('/oferta/{product}', [ProductController::class, 'show']);
+Route::get(
+    '/oferta/{nome}-{productid}',
+    [ProductController::class, 'show']
+)->where('nome', '.*');

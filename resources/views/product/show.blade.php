@@ -5,14 +5,12 @@
 @endsection
 
 @section('content')
-    <h2>Product Name: </h2>
-    <p>{{ $product->name }}</p>
 
-    <h3>Product Belongs to</h3>
+    <div class="card d-flex align-items-center mt-4">
+        <h1>{{ $product->name }}</h1>
 
-    <ul>
-        @foreach ($product->categories as $category)
-            <li>{{ $category->name }}</li>
-        @endforeach
-    </ul>
+        <div>
+            <img class="img-fluid" src="{{ $product->pic }}" alt="{{ $product->name }}">
+        </div>
+    </div>
 @endsection
