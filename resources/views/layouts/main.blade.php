@@ -48,17 +48,17 @@
                             </a>
                         </li>
                     </ul>
-                </div>
-                <div class="ml-auto">
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Procurar Promoção"
-                            aria-label="Search">
-                        <button class="btn btn-promo my-2 my-sm-0" type="submit">
-                            <span class="material-icons-round icon-align">
-                                search
-                            </span>
-                        </button>
-                    </form>
+                            <div class="ml-auto">
+                                <form class="form-inline my-2 my-lg-0">
+                                    <input class="form-control mr-sm-2" type="search" placeholder="Procurar Promoção"
+                                        aria-label="Search">
+                                    <button class="btn btn-promo my-2 my-sm-0" type="submit">
+                                        <span class="material-icons-round icon-align">
+                                            search
+                                        </span>
+                                    </button>
+                                </form>
+                            </div>
                 </div>
             </nav>
         </div>
