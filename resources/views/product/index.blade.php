@@ -1,5 +1,9 @@
 @extends('layout.main')
 
+@section('title')
+    Promo na Hora - As melhores promoções na hora que você precisa
+@endsection
+
 @section('content')
     <div class="row mt-4">
         <div class="col col-10">

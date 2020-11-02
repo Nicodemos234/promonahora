@@ -8,13 +8,17 @@ use Illuminate\Http\Request;
 class StoreController extends Controller
 {
     public function create() {
+        return view('store.create');
+    }
+
+    public function store(Request $request) {
         $store = new Store();
-        $store->name = 'Magazine Luiza';
-        $store->link = 'https://www.magazinevoce.com.br/magazinepromonahoracupom/';
-        $store->pic = 'https://i.imgur.com/xkIRWed.jpg';
+        $store->name = $request->name;
+        $store->link = $request->link;
+        $store->pic = $request->image;
 
         $store->save();
 
-        return redirect('/');
+        return redirect()->back();
     }
 }

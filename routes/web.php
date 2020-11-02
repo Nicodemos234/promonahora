@@ -21,3 +21,6 @@ Route::get(
     '/oferta/{nome}-{productid}',
     [ProductController::class, 'show']
 )->where('nome', '.*');
+
+Route::get('/admin/insertstore', [StoreController::class, 'create']);
+Route::post('/admin/insertstore', [StoreController::class, 'store']);
