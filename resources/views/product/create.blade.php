@@ -29,8 +29,15 @@
         </div>
         <div class="form-group">
             <label for="description">Descrição:</label>
-            <textarea type="text" class="form-control" name="description" id="description">
-            </textarea>
+            <textarea type="text" class="form-control" name="description" id="description"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="store">Loja:</label>
+            <select name="store" id="store"  class="custom-select">
+                @foreach ($stores as $store)
+                    <option value="{{ $store->id }}">{{ $store->name }}</option>
+                @endforeach
+            </select>
         </div>
         <button class="btn btn-block btn-promo">Enviar</button>
     </form>
