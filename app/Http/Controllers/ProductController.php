@@ -24,13 +24,18 @@ class ProductController extends Controller
 
     public function create()
     {
+        return view('product.create');
+    }
+
+    public function store(Request $request)
+    {
         $product = new Product();
-        $product->name = 'Tênis Olympikus FLY masculino';
-        $product->pic = 'https://i.imgur.com/emnqWd3.png';
-        $product->link = 'https://amzn.to/3jOb2VR';
-        $product->priceof = 'R$ 99,99';
-        $product->priceper = 'R$ 74,90';
-        $product->description = 'Produto top';
+        $product->name = $request->name;
+        $product->pic = $request->image;
+        $product->link = $request->link;
+        $product->priceof = $request->priceof;
+        $product->priceper = $request->priceper;
+        $product->description = $request->description;
 
         $store = Store::find(1);
         if ($store) {

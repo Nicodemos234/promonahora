@@ -9,11 +9,16 @@ class CategoryController extends Controller
 {
     public function create()
     {
+        return view('category.create');
+    }
+
+    public function store(Request $request)
+    {
         $category = new Category();
-        $category->name = 'Eletrônicos';
-        $category->icon = 'laptop';
+        $category->name = $request->name;
+        $category->icon = $request->icon;
         $category->save();
 
-        return redirect('/');
+        return redirect()->back();
     }
 }
