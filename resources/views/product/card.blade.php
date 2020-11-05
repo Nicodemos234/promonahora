@@ -1,12 +1,12 @@
 <div class="promo-card">
 
     <div class="promo-card-title">
-        <a href="/oferta/{{ $product->id }}" target="_blank">
+        <a href="{{ $product->product_link }}">
             {{ $product->name }}
         </a>
     </div>
     <div class="promo-card-image">
-    <a href="/oferta/{{ preg_replace('/\W+/', '-', strtolower($product->name))."-".$product->id }}" target="_blank">
+        <a href="{{ $product->product_link }}">
             <img src="{{ $product->pic }}" alt="{{ $product->name }}">
         </a>
     </div>

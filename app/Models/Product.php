@@ -16,12 +16,19 @@ class Product extends Model
         'priceper',
         'description'
     ];
+
     public function store()
     {
         return $this->belongsTo('App\Models\Store');
     }
+
     public function categories()
     {
         return $this->belongsToMany('App\Models\Category');
+    }
+
+    public function getProductLinkAttribute()
+    {
+        return '/oferta/'.preg_replace('/\W+/', '-', strtolower($this->name))."-".$this->id ;
     }
 }

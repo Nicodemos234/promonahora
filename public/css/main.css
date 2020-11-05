@@ -13,10 +13,9 @@ body {
     background-color: #8039E3;
 }
 
-.promo-brand {
-    line-height: 18px;
-    text-align: center;
-    font-weight: 500;
+
+.promo-brand img{
+    max-width: 90px;
 }
 
 .menu .nav-link {
