@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\StoreController;
@@ -16,16 +17,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [ProductController::class, 'index']);
+Route::get('/', [ProductController::class, 'index'])
+    ->name('home');
+
 Route::get(
     '/oferta/{nome}-{productid}',
     [ProductController::class, 'show']
 )->where('nome', '.*');
-Route::get('/admin/insertproduct', [ProductController::class, 'create']);
-Route::post('/admin/insertproduct', [ProductController::class, 'store']);
 
-Route::get('/admin/insertstore', [StoreController::class, 'create']);
-Route::post('/admin/insertstore', [StoreController::class, 'store']);
+Route::get('/admin/insertproduct', [ProductController::class, 'create'])
+    ->middleware('auth');
 
-Route::get('/admin/insertcategory', [CategoryController::class, 'create']);
-Route::post('/admin/insertcategory', [CategoryController::class, 'store']);
+Route::post('/admin/insertproduct', [ProductController::class, 'store'])
+    ->middleware('auth');
+
+Route::get('/admin/insertstore', [StoreController::class, 'create'])
+    ->middleware('auth');
+Route::post('/admin/insertstore', [StoreController::class, 'store'])
+    ->middleware('auth');
+
+Route::get('/admin/insertcategory', [CategoryController::class, 'create'])
+    ->middleware('auth');
+Route::post('/admin/insertcategory', [CategoryController::class, 'store'])
+    ->middleware('auth');
+
+Route::get('/admin', [AdminController::class, 'index']);
+Route::post('/admin', [AdminController::class, 'login']);
