@@ -25,7 +25,8 @@ class ProductController extends Controller
     public function create()
     {
         $stores = Store::all();
-        return view('product.create', compact('stores'));
+        $categories = Category::all();
+        return view('product.create', compact('stores', 'categories'));
     }
 
     public function store(Request $request)
@@ -43,9 +44,12 @@ class ProductController extends Controller
             $product->store_id = $store->id;
         }
 
+        $categories = $request->categories;
+
+
         $product->save();
 
-        $category = Category::find([1, 2]);
+        $category = Category::find($categories);
         $product->categories()->attach($category);
 
         return redirect('/');

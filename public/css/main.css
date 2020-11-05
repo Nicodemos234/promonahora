@@ -98,3 +98,11 @@ body {
     font-weight: bold;
     color: #5A2D96;
 }
+
+/** Form style */
+
+#categorieslist {
+    overflow-y: scroll;
+    max-height: 80px;
+    padding: 5px;
+}

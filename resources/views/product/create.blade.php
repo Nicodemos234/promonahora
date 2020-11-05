@@ -33,11 +33,19 @@
         </div>
         <div class="form-group">
             <label for="store">Loja:</label>
-            <select name="store" id="store"  class="custom-select">
+            <select name="store" id="store" class="custom-select">
                 @foreach ($stores as $store)
                     <option value="{{ $store->id }}">{{ $store->name }}</option>
                 @endforeach
             </select>
+        </div>
+        <div class="form-group">
+            <label>Categorias:</label>
+            <div class="card" id="categorieslist">
+                @foreach ($categories as $category)
+                    <div>{{ $category->name }} <input type="checkbox" name="categories[]" value="{{ $category->id }}"></div>
+                @endforeach
+            </div>
         </div>
         <button class="btn btn-block btn-promo">Enviar</button>
     </form>
