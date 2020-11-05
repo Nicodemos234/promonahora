@@ -70,6 +70,8 @@ body {
 .promo-card-title {
     text-align: center;
     line-height: 18px;
+    max-height: 37px;
+    overflow: hidden;
 }
 
 .promo-card-image {

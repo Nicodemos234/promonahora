@@ -12,5 +12,6 @@
         <div>
             <img class="img-fluid" src="{{ $product->pic }}" alt="{{ $product->name }}">
         </div>
+        {{ $product->store->name }}
     </div>
 @endsection

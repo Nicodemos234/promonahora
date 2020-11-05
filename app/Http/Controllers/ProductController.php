@@ -38,7 +38,7 @@ class ProductController extends Controller
         $product->priceper = $request->priceper;
         $product->description = $request->description;
 
-        $store = Store::find(1);
+        $store = Store::find($request->store);
         if ($store) {
             $product->store_id = $store->id;
         }
