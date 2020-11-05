@@ -106,3 +106,21 @@ body {
     max-height: 80px;
     padding: 5px;
 }
+
+/** Promo pd page */
+
+.promo-pd-page h1 {
+    font-size: 28px;
+}
+
+.promo-pd-price .promo-price-per{
+    font-size: 28px;
+}
+
+.promo-pd-price .promo-price-of{
+    font-size: 22px;
+}
+
+.promo-pd-price {
+    line-height: 26px;
+}
