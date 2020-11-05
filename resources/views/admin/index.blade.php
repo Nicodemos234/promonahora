@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('title')
-    Nothing here
+    Nothing here - Promo na Hora
 @endsection
 
 @section('content')

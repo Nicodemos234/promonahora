@@ -19,5 +19,6 @@ class AdminController extends Controller
                 ->back()
                 ->withErrors("Failed");
         }
+        return redirect()->route('home');
     }
 }

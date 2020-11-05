@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\StoreController;
 use Illuminate\Support\Facades\Route;
 
@@ -43,3 +44,6 @@ Route::post('/admin/insertcategory', [CategoryController::class, 'store'])
 
 Route::get('/admin', [AdminController::class, 'index']);
 Route::post('/admin', [AdminController::class, 'login']);
+
+Route::get('/admin/register', [RegisterController::class, 'create']);
+Route::post('/admin/register', [RegisterController::class, 'store']);
