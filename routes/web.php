@@ -45,5 +45,7 @@ Route::post('/admin/insertcategory', [CategoryController::class, 'store'])
 Route::get('/admin', [AdminController::class, 'index']);
 Route::post('/admin', [AdminController::class, 'login']);
 
-Route::get('/admin/register', [RegisterController::class, 'create']);
-Route::post('/admin/register', [RegisterController::class, 'store']);
+Route::get('/admin/register', [RegisterController::class, 'create'])
+    ->middleware('auth');
+Route::post('/admin/register', [RegisterController::class, 'store'])
+    ->middleware('auth');
