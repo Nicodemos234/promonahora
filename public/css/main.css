@@ -124,3 +124,7 @@ body {
 .promo-pd-price {
     line-height: 26px;
 }
+
+.promo-pd-store-image {
+    max-width: 32px;
+}

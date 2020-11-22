@@ -13,4 +13,9 @@ class Store extends Model
         'pic',
         'link'
     ];
+
+    public function getStoreImageAttribute()
+    {
+        return '/storage/'.$this->pic;
+    }
 }

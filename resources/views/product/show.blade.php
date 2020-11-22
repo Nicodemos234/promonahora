@@ -35,7 +35,7 @@
     <div class="card mt-2 p-2">
         <p>
             {{ $product->description }} <br>
-            Loja: {{ $product->store->name }} <br>
+            Loja: <img class="promo-pd-store-image" src="{{ $product->store->store_image }}" alt="{{ $product->store->name }}"> {{ $product->store->name }} <br>
             Categorias: @foreach ($product->categories as $category)
                 {{ $category->name }};
             @endforeach
