@@ -128,3 +128,21 @@ body {
 .promo-pd-store-image {
     max-width: 32px;
 }
+
+/** Admin page styles */
+
+.promo-card-admin {
+    max-width: 100px;
+    height: 100px;
+    text-align: center;
+    color: #8039E3;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin: 5px 10px;
+}
+
+.promo-card-admin:hover {
+    color: #5A2D96;
+text-decoration: none;
+}

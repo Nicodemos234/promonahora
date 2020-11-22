@@ -49,3 +49,8 @@ Route::get('/admin/register', [RegisterController::class, 'create'])
     ->middleware('auth');
 Route::post('/admin/register', [RegisterController::class, 'store'])
     ->middleware('auth');
+
+Route::get('/logout', function () {
+    \Illuminate\Support\Facades\Auth::logout();
+    return redirect()->route('home');
+});
