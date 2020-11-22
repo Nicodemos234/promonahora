@@ -10,7 +10,7 @@
         <div class="row align-items-center">
             <div class="col col-3">
                 <a href="{{ $product->link }}" target="_blank">
-                    <img class="img-fluid" src="{{ $product->pic }}" alt="{{ $product->name }}">
+                    <img class="img-fluid" src="{{ $product->product_image }}" alt="{{ $product->name }}">
                 </a>
             </div>
             <div class="col">

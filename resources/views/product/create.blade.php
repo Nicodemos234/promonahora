@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <form method="POST" class="mt-4">
+    <form method="POST" enctype="multipart/form-data" class="mt-4">
         @csrf
         <div class="form-group">
             <label for="name">Nome do produto:</label>
@@ -17,7 +17,7 @@
         </div>
         <div class="form-group">
             <label for="image">Imagem do produto:</label>
-            <input type="text" class="form-control" name="image" id="image">
+            <input type="file" class="form-control" name="image" id="image">
         </div>
         <div class="form-group">
             <label for="priceof">Preço de:</label>

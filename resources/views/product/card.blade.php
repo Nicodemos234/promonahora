@@ -7,7 +7,7 @@
     </div>
     <div class="promo-card-image">
         <a href="{{ $product->product_link }}">
-            <img src="{{ $product->pic }}" alt="{{ $product->name }}">
+            <img src="{{ $product->product_image }}" alt="{{ $product->name }}">
         </a>
     </div>
     <div class="promo-card-price">

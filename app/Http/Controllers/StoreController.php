@@ -12,10 +12,18 @@ class StoreController extends Controller
     }
 
     public function store(Request $request) {
+
+        $image = null;
+        if($request->hasFile('image')) {
+            $capa = $request->file('image')->store('store');
+        }else {
+            redirect()->back()->withErrors('É necessário inserir uma imagem');
+        }
+
         $store = new Store();
         $store->name = $request->name;
         $store->link = $request->link;
-        $store->pic = $request->image;
+        $store->pic = $capa;
 
         $store->save();
 

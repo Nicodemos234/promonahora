@@ -31,4 +31,9 @@ class Product extends Model
     {
         return '/oferta/'.preg_replace('/\W+/', '-', strtolower($this->name))."-".$this->id ;
     }
+
+    public function getProductImageAttribute()
+    {
+        return '/storage/'.$this->pic;
+    }
 }

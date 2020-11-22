@@ -31,9 +31,15 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
+        $image = null;
+        if($request->hasFile('image')){
+            $image = $request->file('image')->store('product');
+        }else {
+            return redirect()->back()->withErrors('É necessário inserir uma iamgem');
+        }
         $product = new Product();
         $product->name = $request->name;
-        $product->pic = $request->image;
+        $product->pic = $image;
         $product->link = $request->link;
         $product->priceof = $request->priceof;
         $product->priceper = $request->priceper;
