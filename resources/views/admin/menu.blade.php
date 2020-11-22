@@ -12,7 +12,7 @@
         </span>
     </a>
 
-    <a href="/admin/insertstore" class="card p-2 promo-card-admin">
+    <a href="/admin/insertcategory" class="card p-2 promo-card-admin">
         Inserir Categoria
         <span class="material-icons-round icon-align">
             category
