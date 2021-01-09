@@ -26,29 +26,25 @@ Route::get(
     [ProductController::class, 'show']
 )->where('nome', '.*');
 
-Route::get('/admin/insertproduct', [ProductController::class, 'create'])
-    ->middleware('auth');
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('/', [AdminController::class, 'index']);
+    Route::post('/', [AdminController::class, 'login']);
+    Route::group(['middleware' => 'auth'], function () {
+        Route::get('/insertproduct', [ProductController::class, 'create']);
 
-Route::post('/admin/insertproduct', [ProductController::class, 'store'])
-    ->middleware('auth');
+        Route::post('/insertproduct', [ProductController::class, 'store']);
 
-Route::get('/admin/insertstore', [StoreController::class, 'create'])
-    ->middleware('auth');
-Route::post('/admin/insertstore', [StoreController::class, 'store'])
-    ->middleware('auth');
+        Route::get('/insertstore', [StoreController::class, 'create']);
+        Route::post('/insertstore', [StoreController::class, 'store']);
 
-Route::get('/admin/insertcategory', [CategoryController::class, 'create'])
-    ->middleware('auth');
-Route::post('/admin/insertcategory', [CategoryController::class, 'store'])
-    ->middleware('auth');
+        Route::get('/insertcategory', [CategoryController::class, 'create']);
+        Route::post('/insertcategory', [CategoryController::class, 'store']);
 
-Route::get('/admin', [AdminController::class, 'index']);
-Route::post('/admin', [AdminController::class, 'login']);
+        Route::get('/register', [RegisterController::class, 'create']);
+        Route::post('/register', [RegisterController::class, 'store']);
+    });
+});
 
-Route::get('/admin/register', [RegisterController::class, 'create'])
-    ->middleware('auth');
-Route::post('/admin/register', [RegisterController::class, 'store'])
-    ->middleware('auth');
 
 Route::get('/logout', function () {
     \Illuminate\Support\Facades\Auth::logout();
