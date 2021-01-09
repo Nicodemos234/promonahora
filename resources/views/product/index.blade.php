@@ -12,6 +12,9 @@
                     @include('product.card')
                 @endforeach
             </div>
+            <div class="row">
+                {{ $products->links() }}
+            </div>
         </div>
         <div class="col">
             Menu Lateral aqui
